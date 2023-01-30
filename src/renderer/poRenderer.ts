@@ -7,7 +7,7 @@ import { Options } from '../options';
 import { PoRendererData } from './poRendererData';
 
 export class PoRenderer extends Renderer {
-  public options: Options;
+  declare public options: Options;
   private data: PoRendererData = { title: undefined, files: [] };
 
   /**

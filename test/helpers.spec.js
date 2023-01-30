@@ -43,7 +43,7 @@ describe('Helpers', () => {
   });
 
   it('should have created the module according to the template', () => {
-    const rendered = mustache.render(templates.module(), renderOptions);
+    const rendered = mustache.render(templates.templateModule(), renderOptions);
     assert.equal(module, rendered);
   });
 
