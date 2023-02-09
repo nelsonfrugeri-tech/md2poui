@@ -29,6 +29,9 @@ md2poui C:/pathFromMdFiles C:/pathToAngularFiles
 
 ## Release Notes
 
+### 4.0.0
+  - Atualizado para para rodar com a versão 15 do po-ui e node 18.
+
 ### 3.0.0
 
 - Removido suporte ao `Portinari UI` e adicionado suporte somente ao **PO-UI**.
