@@ -1,4 +1,4 @@
-export const module = () => `import { NgModule } from '@angular/core';
+export const templateModule = () => `import { NgModule } from '@angular/core';
 import { PoModule } from '@po-ui/ng-components';
 
 import { {{moduleClassName}}RoutingModule } from './{{moduleName}}-routing.module';

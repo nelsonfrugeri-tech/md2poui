@@ -1,8 +1,8 @@
-import { MarkedOptions } from 'marked';
+import { marked } from 'marked';
 
 import { PoRenderer } from './renderer';
 
-export interface Options extends MarkedOptions {
+export interface Options extends marked.MarkedOptions {
   /**
    * @override
    */

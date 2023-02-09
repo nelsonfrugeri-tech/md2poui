@@ -50,7 +50,8 @@ export class Converter {
     markdown = Transform.textToIcon(markdown);
 
     const renderer = new PoRenderer();
-    const content = marked(markdown, { renderer });
+    
+    const content = marked.marked(markdown, { renderer });
 
     return mustache.render(templates.componentView(), { title: renderer.getTitle(), content });
   }
@@ -121,7 +122,7 @@ export class Converter {
     const markdown = Transform.textToIcon(fs.readFileSync(component.getFile(), 'utf-8'));
 
     this.options.renderer = new PoRenderer();
-    const content = marked(markdown, this.options);
+    const content = marked.marked(markdown, this.options);
 
     component.setTitle(this.options.renderer.getTitle());
 
@@ -147,7 +148,7 @@ export class Converter {
     const home = this.options.home;
     const moduleName = this.options.moduleName;
     const moduleClassName = Transform.pascalCase(moduleName);
-    const content = mustache.render(templates.module(), { imports, home, components, moduleName, moduleClassName });
+    const content = mustache.render(templates.templateModule(), { imports, home, components, moduleName, moduleClassName });
     this.writeFile(path.join(this.destDir, `${this.options.moduleName}.module.ts`), content);
   }
 
