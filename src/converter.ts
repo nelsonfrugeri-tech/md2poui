@@ -124,7 +124,8 @@ export class Converter {
     this.options.renderer = new PoRenderer();
     const content = marked.marked(markdown, this.options);
 
-    component.setTitle(this.options.renderer.getTitle());
+    // Sem H1, a página usa o nome da classe, o mesmo fallback do menu.
+    component.setTitle(this.options.renderer.getTitle() || component.getClassName());
 
     // Efetua a cópia dos arquivos externos encontrados no Markdown.
     if (this.options.copyExternalFiles)
